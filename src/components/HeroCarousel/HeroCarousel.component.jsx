@@ -1,14 +1,12 @@
 import React from 'react';
 
+import { NextArrow, PrevArrow } from './Arrows.component';
+
 // React Slick
 import HeroSlider from "react-slick";
 
-// Import css files
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const HeroCarousel = () => {
-
     const settingsLG = {
         arrows: true,
         autoplay: true,
@@ -18,6 +16,8 @@ const HeroCarousel = () => {
         slidesToScroll: 1,
         infinite: true,
         speed: 500,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
     }
 
     const settings = {
@@ -28,8 +28,11 @@ const HeroCarousel = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
     };
+
     const images = [
         "https://images.unsplash.com/photo-1593642531955-b62e17bdaa9c?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
         "https://images.unsplash.com/photo-1626128665085-483747621778?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=610&q=80",
