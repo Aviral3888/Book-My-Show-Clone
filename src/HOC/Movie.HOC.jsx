@@ -2,9 +2,9 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 // Layout
-import DefaultLayout from '../layouts/Default.layout';
+import MovieLayout from '../layouts/Movie.layout';
 
-const DefaultHOC = ({ component: Component, ...rest }) => {
+const MovieHOC = ({ component: Component, ...rest }) => {
 
     // component  ( destructuring of component )
     // path
@@ -15,13 +15,13 @@ const DefaultHOC = ({ component: Component, ...rest }) => {
             <Route
                 {...rest}
                 component={(props) => (
-                    <DefaultLayout>
+                    <MovieLayout>
                         <Component {...props} />
-                    </DefaultLayout>
+                    </MovieLayout>
                 )}
             />
         </>
     );
 };
 
-export default DefaultHOC;
+export default MovieHOC;
