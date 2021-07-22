@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react'
 
+// Component
+import MovieHero from '../components/MovieHero/MovieHero.component';
 const Movie = () => {
     return (
-        <div>
-            <h2 className="text-2xl text-red-800 font-bold">Hi</h2>
-        </div>
+        <>
+            <MovieHero />
+        </>
     )
 };
 
