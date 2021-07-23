@@ -5,7 +5,7 @@ const MovieInfo = () => {
         <>
             <div className="flex flex-col gap-3 lg:gap-8">
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3  md:px-4">
                     <div className="w-28 h-6">
                         <img
                             src="https://in.bmscdn.com/moviemode/tvod/premiere-tag.png"
@@ -22,17 +22,17 @@ const MovieInfo = () => {
                     Zack Synder's Justice League
                 </h1>
 
-                <div className="flex flex-col-reverse lg:flex-col gap-3 lg:gap-8">
-                    <div className="text-white font-light flex flex-col gap-2 lg:gap-6">
+                <div className="flex flex-col-reverse lg:flex-col gap-3 lg:gap-8 ">
+                    <div className="text-white font-light flex flex-col gap-2 lg:gap-6 md:px-4">
                         <h4>4k &bull; English &bull; Action </h4>
                         <h4>2h 10m &bull; Sci-Fi, Thriller &bull; 13+ </h4>
                     </div>
 
-                    <div className="flex items-center gap-4">
-                        <button className="bg-red-600 w-full py-3 text-white font-semibold rounded-lg" >
+                    <div className="flex items-center gap-4 md:w-screen lg:w-full md:px-4">
+                        <button className="bg-red-600 w-full py-2 lg:py-3 text-white font-semibold rounded-lg" >
                             Rent ₹149
                         </button>
-                        <button className="bg-red-600 w-full py-3 text-white font-semibold rounded-lg" >
+                        <button className="bg-red-600 w-full py-2 lg:py-3 text-white font-semibold rounded-lg" >
                             Buy ₹599
                         </button>
                     </div>
