@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 // Components
 import EntertainmentCardSlider from '../components/Entertainment/Entertainmentcard.component';
@@ -7,7 +8,50 @@ import PosterSlider from '../components/PosterSlider/PosterSlider.component';
 // config
 import TempPosters from '../config/TempPosters.config';
 
+
 const HomePage = () => {
+
+    const [popularMovies, setPopularMovies] = useState([]);
+    const [topRatedMovies, setTopRatedMovies] = useState([]);
+    const [upcomingMovies, setUpcomingMovies] = useState([]);
+
+    // Premier Section UseEffect
+    useEffect(() => {
+
+        const requestPopularMovies = async () => {
+            const getPopularMovies = await axios.get("/movie/popular");
+            setPopularMovies(getPopularMovies.data.results);
+        }
+
+        requestPopularMovies();
+
+    }, []);
+
+    // Online Streaming Events Section UseEffect
+    useEffect(() => {
+
+        const requestPopularMovies = async () => {
+            const getPopularMovies = await axios.get("/movie/popular");
+            setPopularMovies(getPopularMovies.data.results);
+        }
+
+        requestPopularMovies();
+
+    }, []);
+
+    // Outdoor Events Section UseEffect
+    useEffect(() => {
+
+        const requestPopularMovies = async () => {
+            const getPopularMovies = await axios.get("/movie/popular");
+            setPopularMovies(getPopularMovies.data.results);
+        }
+
+        requestPopularMovies();
+
+    }, []);
+
+    console.log({ popularMovies });
 
     return (
         <>
@@ -30,7 +74,7 @@ const HomePage = () => {
                             />
                         </div>
                         <PosterSlider
-                            images={TempPosters}
+                            images={popularMovies}
                             title="Premieres"
                             subtitle="Brand new releases every Friday"
                             isDark={true}
