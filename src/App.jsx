@@ -31,10 +31,3 @@ function App() {
 
 export default App;
 
-
-
-// Key id
-// rzp_test_IVMF9AUI9M7Wtr
-
-// Secret Key
-// xLazm48PYbVzbbxiJO1wAaQS
