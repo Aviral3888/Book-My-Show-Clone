@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BiChevronRight, BiSearch, BiMenu, BiShareAlt } from "react-icons/bi";
 import { AiFillCaretDown } from 'react-icons/ai';
 
-// Navbar for different devices 
+// context
+import { MovieContext } from '../../context/movie.context';
 
+// Navbar for different devices 
 // Mobile & Tablet
 const NavSm = () => {
+
+    const { movie } = useContext(MovieContext);
+
     return (
         <>
             <div className="text-white flex items-center justify-between">
                 <div>
                     <h3 className="text-xl font-bold">
-                        It All starts Here!
+                        {movie.original_title}
                     </h3>
                 </div>
                 <div className="w-7 h-7">

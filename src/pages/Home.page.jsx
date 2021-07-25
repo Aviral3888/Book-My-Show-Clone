@@ -30,28 +30,28 @@ const HomePage = () => {
     // Online Streaming Events Section UseEffect
     useEffect(() => {
 
-        const requestPopularMovies = async () => {
-            const getPopularMovies = await axios.get("/movie/popular");
-            setPopularMovies(getPopularMovies.data.results);
+        const requestTopRatedMovies = async () => {
+            const getTopRatedMovies = await axios.get("/movie/top_rated");
+            setTopRatedMovies(getTopRatedMovies.data.results);
         }
 
-        requestPopularMovies();
+        requestTopRatedMovies();
 
     }, []);
 
     // Outdoor Events Section UseEffect
     useEffect(() => {
 
-        const requestPopularMovies = async () => {
-            const getPopularMovies = await axios.get("/movie/popular");
-            setPopularMovies(getPopularMovies.data.results);
+        const requestUpcomingMovies = async () => {
+            const getUpcomingMovies = await axios.get("/movie/popular");
+            setUpcomingMovies(getUpcomingMovies.data.results);
         }
 
-        requestPopularMovies();
+        requestUpcomingMovies();
 
     }, []);
 
-    console.log({ popularMovies });
+
 
     return (
         <>
@@ -86,7 +86,7 @@ const HomePage = () => {
                 {/* Section 3: Online Streaming Events  */}
                 <div className="container mx-auto px-lg ">
                     <PosterSlider
-                        images={TempPosters}
+                        images={topRatedMovies}
                         title="Online Streaming Events"
                         isDark={false}
                     />
@@ -95,7 +95,7 @@ const HomePage = () => {
                 {/* Section 3: Online Streaming Events  */}
                 <div className="container mx-auto px-lg ">
                     <PosterSlider
-                        images={TempPosters}
+                        images={upcomingMovies}
                         title="Outdoor Events"
                         isDark={false}
                     />

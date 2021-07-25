@@ -1,8 +1,33 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+
+// component
+import PaymentModal from '../PaymentModal/Payment.component';
+
+// context
+import { MovieContext } from '../../context/movie.context';
 
 const MovieInfo = () => {
+
+    const [isOpen, setIsOpen] = useState(false);
+    const [price, setPrice] = useState(0);
+    const { movie } = useContext(MovieContext);
+
+    // optional chaining
+    const genres = movie.genres?.map(({ name }) => name).join(", ");
+
+    const rentMovies = () => {
+        setIsOpen(true);
+        setPrice(149);
+    };
+
+    const buyMovies = () => {
+        setIsOpen(true);
+        setPrice(599);
+    };
+
     return (
         <>
+            <PaymentModal setIsOpen={setIsOpen} isOpen={isOpen} price={price} />
             <div className="flex flex-col gap-3 lg:gap-8">
 
                 <div className="flex items-center gap-3  md:px-4">
@@ -18,21 +43,27 @@ const MovieInfo = () => {
                     </span>
                 </div>
 
-                <h1 className="hidden lg:block text-white lg:text-4xl font-bold">
-                    Zack Synder's Justice League
+                <h1 className="hidden lg:block text-white lg:text-4xl font-bold lg:ml-4">
+                    {movie.original_title}
                 </h1>
 
                 <div className="flex flex-col-reverse lg:flex-col gap-3 lg:gap-8 ">
                     <div className="text-white font-light flex flex-col gap-2 lg:gap-6 md:px-4">
-                        <h4>4k &bull; English &bull; Action </h4>
-                        <h4>2h 10m &bull; Sci-Fi, Thriller &bull; 13+ </h4>
+                        <h4>4k &bull; {movie.original_language}</h4>
+                        <h4>{Math.floor(movie.runtime / 60)}hr {(movie.runtime % 60)}min &bull; {genres} &bull; 13+ </h4>
                     </div>
 
                     <div className="flex items-center gap-4 md:w-screen lg:w-full md:px-4">
-                        <button className="bg-red-600 w-full py-2 lg:py-3 text-white font-semibold rounded-lg" >
+                        <button
+                            onClick={rentMovies}
+                            className="bg-red-600 w-full py-2 lg:py-3 text-white font-semibold rounded-lg"
+                        >
                             Rent ₹149
                         </button>
-                        <button className="bg-red-600 w-full py-2 lg:py-3 text-white font-semibold rounded-lg" >
+                        <button
+                            onClick={buyMovies}
+                            className="bg-red-600 w-full py-2 lg:py-3 text-white font-semibold rounded-lg"
+                        >
                             Buy ₹599
                         </button>
                     </div>
