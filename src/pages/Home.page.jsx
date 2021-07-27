@@ -58,8 +58,8 @@ const HomePage = () => {
             <div className="flex flex-col gap-12">
 
                 {/* Section 1: Best of Entertainment */}
-                <div className="container mx-auto px-md">
-                    <h1 className="text-2xl font-bold text-gray-800 my-3 px-3">The Best of Entertainment</h1>
+                <div className="container mx-auto px-md lg:mt-10 lg:mb-6">
+                    <h1 className="text-2xl font-bold text-gray-800 my-3  px-3">The Best of Entertainment</h1>
                     <EntertainmentCardSlider />
                 </div>
 
@@ -84,7 +84,7 @@ const HomePage = () => {
                 </div>
 
                 {/* Section 3: Online Streaming Events  */}
-                <div className="container mx-auto px-lg ">
+                <div className="container mx-auto px-lg shadow-lg">
                     <PosterSlider
                         images={topRatedMovies}
                         title="Online Streaming Events"

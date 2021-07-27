@@ -62,10 +62,10 @@ const HeroCarousel = () => {
                 </HeroSlider>
             </div>
 
-            <div className="hidden lg:block">
+            <div className="hidden lg:block bg-bms-50 shadow-xl">
                 <HeroSlider {...settingsLG}>
                     {images.map((image) => (
-                        <div className="w-full h-96 px-2 py-3 ">
+                        <div className="w-full h-96 px-8 py-10 ">
                             <img
                                 src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`}
                                 alt="Carousel images"
