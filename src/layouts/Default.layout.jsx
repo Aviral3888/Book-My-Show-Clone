@@ -3,6 +3,7 @@ import React from 'react';
 // Component
 import Navbar from '../components/Navbar/navbar.component';
 import HeroCarousel from '../components/HeroCarousel/HeroCarousel.component';
+import Footer from '../components/Footer/Footer.component';
 
 const DefaultLayout = (props) => {
 
@@ -11,6 +12,7 @@ const DefaultLayout = (props) => {
             <Navbar />
             <HeroCarousel />
             {props.children}
+            <Footer />
         </>
     )
 };

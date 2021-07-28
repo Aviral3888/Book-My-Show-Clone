@@ -9,6 +9,7 @@ import Slider from 'react-slick';
 import MovieHero from '../components/MovieHero/MovieHero.component';
 import Cast from '../components/Cast/Cast.component';
 import PosterSlider from '../components/PosterSlider/PosterSlider.component';
+import Privacy from '../components/Privacy Note/Privacy.component';
 
 // Config
 import TempPosters from '../config/TempPosters.config';
@@ -219,8 +220,15 @@ const Movie = () => {
                         config={settings}
                     />
                 </div>
+
             </div>
 
+            <div className="container mx-auto px-lg  bg-gray-200">
+                {/* Section 5: Privacy Note */}
+                <div className="hidden lg:block container mx-auto px-lg pb-5 pt-3">
+                    <Privacy />
+                </div>
+            </div>
         </>
     )
 };

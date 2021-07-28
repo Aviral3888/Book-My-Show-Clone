@@ -4,6 +4,7 @@ import axios from 'axios';
 // Components
 import EntertainmentCardSlider from '../components/Entertainment/Entertainmentcard.component';
 import PosterSlider from '../components/PosterSlider/PosterSlider.component';
+import Privacy from '../components/Privacy Note/Privacy.component';
 
 // config
 import TempPosters from '../config/TempPosters.config';
@@ -92,7 +93,7 @@ const HomePage = () => {
                     />
                 </div>
 
-                {/* Section 3: Online Streaming Events  */}
+                {/* Section 4: Online Streaming Events  */}
                 <div className="container mx-auto px-lg ">
                     <PosterSlider
                         images={upcomingMovies}
@@ -100,6 +101,12 @@ const HomePage = () => {
                         isDark={false}
                     />
                 </div>
+
+                {/* Section 5: Privacy Note */}
+                <div className="hidden lg:block container mx-auto px-lg pb-5 pt-3 bg-gray-200">
+                    <Privacy />
+                </div>
+
             </div>
         </>
     )
