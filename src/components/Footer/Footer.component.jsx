@@ -4,6 +4,8 @@ import { RiCustomerService2Fill } from 'react-icons/ri';
 import { GiTicket } from 'react-icons/gi';
 import { BsNewspaper } from 'react-icons/bs';
 
+// component
+import Icons from './Icons.footer.component';
 
 const Footer = () => {
     return (
@@ -84,7 +86,25 @@ const Footer = () => {
                             MOVIES PLAYING IN NATIONAL CAPITAL REGION (NCR)
                         </h2>
                         <p>
-                            Roohi | Mast Kalandar | Mumbai Saga
+                            Roohi | Mast Kalandar | Mumbai Saga | The GodFather | The Suicide Squad | Mortal Kombat | Black Widow | War with Grandpa
+                        </p>
+                        <h2 className="font-medium mt-5">
+                            UPCOMING MOVIES
+                        </h2>
+                        <p>
+                            Marriage And Divorce | Hitman | Bhuj: The Pride of India | Horror Stories | Shershah | Lion of the Arabian Sea
+                        </p>
+                        <h2 className="font-medium mt-5">
+                            PLAYS IN TOP CITIES
+                        </h2>
+                        <p>
+                            Plays in Mumbai | Plays in National Capital Region (NCR) | Plays in Hyderabad | Plays in Bengaluru | Plays in Kolkata | Plays in Gurugram
+                        </p>
+                        <h2 className="font-medium mt-5">
+                            BOOKMYSHOW EXCLUSIVE
+                        </h2>
+                        <p>
+                            Watch Guide | Superstar | BookASmile | Gift Cards | List My show | Offers
                         </p>
                     </div>
 
@@ -99,6 +119,10 @@ const Footer = () => {
                         </div>
                         <div className="w-full h-0.5 bg-gray-500">
                         </div>
+                    </div>
+
+                    <div className="flex justify-center my-5">
+                        <Icons />
                     </div>
 
                     <div className="text-xs text-center text-gray-500">
