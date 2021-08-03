@@ -7,21 +7,32 @@ import PlaysFilter from '../components/PlaysFilters/PlaysFilters.component';
 import Privacy from '../components/Privacy Note/Privacy.component';
 import PosterSlider from '../components/PosterSlider/PosterSlider.component';
 
-// config 
-import PosterCarousel from '../config/PosterCarousel.config';
-
 const PlaysTwo = () => {
 
-    const [tvshows, setTvshows] = useState([]);
-    // const [tvtoprated, setTvtoprated] = useState([]);
+    const [popularMovies, setPopularMovies] = useState([]);
+    const [upcomingMovies, setUpcomingMovies] = useState([]);
+
+
+    // Premier Section UseEffect
+    useEffect(() => {
+
+        const requestPopularMovies = async () => {
+            const getPopularMovies = await axios.get("/tv/popular");
+            setPopularMovies(getPopularMovies.data.results);
+        }
+
+        requestPopularMovies();
+
+    }, []);
 
     useEffect(() => {
 
-        const requestTvshows = async () => {
-            const getTvshows = await axios.get("/tv/latest");
-            setTvshows(getTvshows.data.results);
+        const requestUpcomingMovies = async () => {
+            const getUpcomingMovies = await axios.get("/tv/top_rated");
+            setUpcomingMovies(getUpcomingMovies.data.results);
         }
-        requestTvshows();
+
+        requestUpcomingMovies();
 
     }, []);
 
@@ -68,17 +79,19 @@ const PlaysTwo = () => {
                     {/* Plays Section */}
                     <div className="lg:w-3/4 flex gap-3">
 
-                        <div className="">
-                            {/* <PosterSlider {...PosterCarousel}
-                                images={tvshows}
-                                title="Latest TV Episodes"
-                                config={settingsPlays}
+                        <div className="container mb-5">
+                            <PosterSlider
+                                images={popularMovies}
+                                title="Popular TV Shows"
                                 isDark={false}
-                            /> */}
-                            {/* <PosterSlider
-                                images={tvshows}
-                            /> */}
-
+                                config={settingsPlays}
+                            />
+                            <PosterSlider
+                                images={upcomingMovies}
+                                title="Top Rated TV Shows"
+                                isDark={false}
+                                config={settingsPlays}
+                            />
                         </div>
 
 
