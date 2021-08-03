@@ -4,6 +4,7 @@ import axios from 'axios';
 
 // Component
 import MovieNavbar from '../components/Navbar/movienavbar.component';
+import Footer from '../components/Footer/Footer.component';
 
 // context
 import { MovieContext } from "../context/movie.context";
@@ -25,6 +26,9 @@ const MovieLayout = (props) => {
         <>
             <MovieNavbar />
             {props.children}
+            <div className="hidden lg:block">
+                <Footer />
+            </div>
         </>
     )
 };

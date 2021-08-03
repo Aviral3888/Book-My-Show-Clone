@@ -12,7 +12,9 @@ const DefaultLayout = (props) => {
             <Navbar />
             <HeroCarousel />
             {props.children}
-            <Footer />
+            <div className="hidden lg:block">
+                <Footer />
+            </div>
         </>
     )
 };

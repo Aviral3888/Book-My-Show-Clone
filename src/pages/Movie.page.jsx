@@ -10,7 +10,6 @@ import MovieHero from '../components/MovieHero/MovieHero.component';
 import Cast from '../components/Cast/Cast.component';
 import PosterSlider from '../components/PosterSlider/PosterSlider.component';
 import Privacy from '../components/Privacy Note/Privacy.component';
-import Footer from '../components/Footer/Footer.component';
 
 // Config
 import TempPosters from '../config/TempPosters.config';
@@ -231,9 +230,6 @@ const Movie = () => {
                 </div>
             </div>
 
-            <div>
-                <Footer />
-            </div>
         </>
     )
 };

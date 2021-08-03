@@ -3,6 +3,7 @@ import React from 'react';
 // Component
 import Poster from '../components/Poster/poster.component';
 import PlaysFilter from '../components/PlaysFilters/PlaysFilters.component';
+import Privacy from '../components/Privacy Note/Privacy.component';
 
 const Plays = () => {
     return (
@@ -81,7 +82,13 @@ const Plays = () => {
 
                 </div>
 
+            </div>
 
+            <div className="container mx-auto px-lg  bg-gray-200">
+                {/* Section 5: Privacy Note */}
+                <div className="hidden lg:block container mx-auto px-lg pb-5 pt-3">
+                    <Privacy />
+                </div>
             </div>
         </>
     )
