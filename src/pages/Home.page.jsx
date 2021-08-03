@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 // Components
 import EntertainmentCardSlider from '../components/Entertainment/Entertainmentcard.component';
@@ -79,7 +80,6 @@ const HomePage = () => {
                             title="Premieres"
                             subtitle="Brand new releases every Friday"
                             isDark={true}
-
                         />
                     </div>
                 </div>
@@ -100,6 +100,18 @@ const HomePage = () => {
                         title="Outdoor Events"
                         isDark={false}
                     />
+                </div>
+
+                <div className="flex justify-center md:mb-10">
+                    <Link to="/plays">
+                        <button
+                            className="bg-red-600 border-2 border-solid border-red-800 py-2 px-4 rounded-md hover:bg-red-800"
+                        >
+                            <p className="text-gray-200 font-medium hover:text-white">
+                                View TV Shows
+                            </p>
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Section 5: Privacy Note */}

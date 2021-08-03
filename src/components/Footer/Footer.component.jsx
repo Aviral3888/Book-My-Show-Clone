@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import { AiFillShop } from 'react-icons/ai';
 import { RiCustomerService2Fill } from 'react-icons/ri';
 import { GiTicket } from 'react-icons/gi';
@@ -112,10 +114,12 @@ const Footer = () => {
                         <div className="w-full h-0.5 bg-gray-500">
                         </div>
                         <div className="w-24 h-16">
-                            <img
-                                src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
-                                alt="Logo"
-                                className="w-full h-full" />
+                            <Link to="/">
+                                <img
+                                    src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
+                                    alt="Logo"
+                                    className="w-full h-full" />
+                            </Link>
                         </div>
                         <div className="w-full h-0.5 bg-gray-500">
                         </div>

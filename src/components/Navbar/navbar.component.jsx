@@ -1,6 +1,7 @@
 import React from 'react';
 import { BiChevronRight, BiSearch, BiMenu } from "react-icons/bi";
 import { AiFillCaretDown } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 // Navbar for different devices 
 // Mobile 
@@ -43,10 +44,12 @@ const NavLg = () => {
             <div className="container mx-auto px-md flex items-center  justify-between">
                 <div className="flex items-center w-1/2 gap-3">
                     <div className="w-12 h-12">
-                        <img
-                            src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
-                            alt="Logo"
-                            className="w-full h-full" />
+                        <Link to="/">
+                            <img
+                                src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
+                                alt="Logo"
+                                className="w-full h-full" />
+                        </Link>
                     </div>
                     <div className="w-full flex items-center gap-3 bg-white py-2 px-3 rounded-sm" >
                         <BiSearch className="w-5 h-5 text-gray-600" />
