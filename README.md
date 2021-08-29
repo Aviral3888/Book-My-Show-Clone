@@ -3,7 +3,7 @@
 Link : https://book-my-show-clone-709t5ne0t-aviral3888.vercel.app/
 
 BookMyShow Website is the leading entertainment ticketing website.               
-In this project I have made all the front-end design of this website using React.js and Tailwind CSS.
+In this project I have made all the front-end design of this website using React.js and Tailwind CSS. Responsive Designing
 
 #### Layout of Project
 Website has 3 main pages : 
