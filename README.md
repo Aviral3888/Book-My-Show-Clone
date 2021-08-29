@@ -31,8 +31,8 @@ Also data of TV Shows, popular shows, Upcoming shows, Latest shows were taken fr
 *View [TMDB Documentation](https://www.themoviedb.org/documentation/api)*
 
 #### Payment Gateway
-RajorPay Gateway Integrated for makig Payments                          
-*View [RajorPay Documentation](https://razorpay.com/docs/)*
+RazorPay Gateway Integrated for makig Payments                          
+*View [RazorPay Documentation](https://razorpay.com/docs/)*
 
 #### Online Components Used 
 - ***React Slick*** used for making carousels and customising styling.
